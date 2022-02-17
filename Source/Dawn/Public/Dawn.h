@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+
+// Custom log functions
 DECLARE_LOG_CATEGORY_EXTERN(Dawn, Log, All);
 #define DLOG_CALLINFO (FString(__FUNCTION__) + TEXT("(") + FString::FromInt(__LINE__) + TEXT(")"))
 #define DLOG_S(Verbosity) UE_LOG(Dawn, Verbosity, TEXT("%s"), *DLOG_CALLINFO)
