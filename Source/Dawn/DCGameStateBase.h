@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Dawn.h"
 #include "GameFramework/GameStateBase.h"
 #include "DCGameStateBase.generated.h"
 
