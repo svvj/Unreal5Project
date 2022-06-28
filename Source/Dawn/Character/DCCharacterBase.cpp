@@ -2,6 +2,7 @@
 
 
 #include "Dawn/Character/DCCharacterBase.h"
+#include "Dawn/DCPlayerController.h"
 
 // Sets default values
 ADCCharacterBase::ADCCharacterBase()
@@ -16,12 +17,23 @@ void ADCCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	// Initialize player controller and check it is ok
+	DCPlayerController = Cast<ADCPlayerController>(GetController());
+	DCCHECK(nullptr != DCPlayerController);
+
 }
 
 // Called every frame
 void ADCCharacterBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+// Called after initializing components
+void ADCCharacterBase::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
 
 }
 

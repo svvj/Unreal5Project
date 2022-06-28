@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Dawn/Dawn.h"
 #include "GameFramework/Character.h"
 #include "DCCharacterBase.generated.h"
 
@@ -22,8 +22,15 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	// Called after initializing components
+	virtual void PostInitializeComponents() override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+private:
+	// Player Controller property
+	UPROPERTY()
+	class ADCPlayerController* DCPlayerController;
 
 };
