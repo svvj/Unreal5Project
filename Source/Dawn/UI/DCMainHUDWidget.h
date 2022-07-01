@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Dawn/Dawn.h"
 #include "Blueprint/UserWidget.h"
 #include "DCMainHUDWidget.generated.h"
 
